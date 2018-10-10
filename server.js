@@ -5,6 +5,7 @@ var app = express();
 
 app.set('viewengine','ejs');
 
+const port = process.env.PORT || 3400;
 
 app.use(express.static(__dirname+'/public'));
 
@@ -37,7 +38,6 @@ app.get('/User',(req,res) => {
     })
     });
 
-    
-app.listen(3000,() => {
-console.log(`server started on port 3000`);
-});
+
+app.listen(port, () => {});
+
